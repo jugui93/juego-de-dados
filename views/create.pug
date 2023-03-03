@@ -1,0 +1,28 @@
+extends layout 
+
+block content 
+    h1 Registra la siguiente partida
+    form(action="/createGame" method='post')
+        label(for="idGame") Ingresa el identificador de la partida:
+        br
+        input#idgame(type="text" name="idgame")
+        br
+        label(for='type') Selecciona el tipo de juego:
+        br
+        select#type(name='type')
+            option(value='test') Prueba
+            option(value='bet') Apuesta
+        br
+        label(for="player1") Ingresa el nombre del jugador 1:
+        br
+        input#player1(type='text' name="player1")
+        br
+        label(for="player2") Ingresa el nombre del jugador 2:
+        br
+        input#player2(type='text' name="player2")
+        br
+        label(for="player3") Ingresa el nombre del jugador 3:
+        br
+        input#player3(type='text' name="player3")
+        br
+        button(type="submit") Iniciar 
